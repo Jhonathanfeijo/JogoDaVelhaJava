@@ -26,7 +26,8 @@ public class Jogo {
 			return true;
 		return false;
 	}
-
+	
+	//Jogador faz marcação no tabuleiro e retorna o tabuleiro marcado
 	public Tabuleiro vezJogador(Jogador jogador, Tabuleiro tabuleiro) {
 		System.out.println("\n Vez de " + jogador.nomeJogador + "! \n");
 		mostrarTabuleiro();
@@ -44,7 +45,6 @@ public class Jogo {
 		while (jogadasRestantes != 0) {
 			
 			if (jogadasRestantes != 0) {
-				// Jogador 1 faz marcação no tabuleiro e devolve tabuleiro marcado
 				this.tabuleiro = vezJogador(jogador1, this.tabuleiro);
 				// Caso verdadeiro, o jogador 1 será o vencedor e zera as jogadas restantes
 				if (existeVencedor(this.tabuleiro)) {
@@ -56,7 +56,6 @@ public class Jogo {
 			}
 			
 			if (jogadasRestantes != 0) {
-				// Jogador 2 faz marcação no tabuleiro e devolve tabuleiro marcado
 				this.tabuleiro = vezJogador(jogador2, this.tabuleiro);
 				// Caso verdadeiro, o jogador 2 será vencedor e zera as jogadas restantes
 				if (existeVencedor(this.tabuleiro)) {
@@ -68,7 +67,7 @@ public class Jogo {
 			}
 		}
 		mostrarTabuleiro();
-		// verifica quem ganhou ou se impatou
+		// verifica quem ganhou ou se empatou
 		if (jogador1.vencedor)
 			System.out.println("\n Parabéns, " + jogador1.nomeJogador + ". Você venceu!");
 		else if (jogador2.vencedor)
