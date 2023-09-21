@@ -47,5 +47,5 @@ public class Jogador {
 			tabuleiro = jogar(tabuleiro);
 		}
 		return tabuleiro;
-	}
+	// manu vc eh gay
 }
